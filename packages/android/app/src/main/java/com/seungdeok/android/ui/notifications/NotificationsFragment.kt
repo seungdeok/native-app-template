@@ -4,6 +4,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.webkit.WebChromeClient
+import android.webkit.WebView
+import android.webkit.WebViewClient
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -28,9 +31,18 @@ class NotificationsFragment : Fragment() {
         _binding = FragmentNotificationsBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textNotifications
+        val webView: WebView = binding.webView
         notificationsViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
+            val url = "https://google.com"
+            val webSettings = webView.settings
+            webSettings.javaScriptEnabled = true
+            webSettings.loadWithOverviewMode = true
+            webSettings.useWideViewPort = true
+
+            webView.webViewClient = WebViewClient()
+            webView.webChromeClient = WebChromeClient()
+
+            webView.loadUrl(url)
         }
         return root
     }
