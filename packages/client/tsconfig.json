@@ -16,9 +16,8 @@
     "noEmit": true,
     "jsx": "react-jsx",
     // absolute path alias
-    "baseUrl": "./src",
     "paths": {
-      "@/*": ["*"]
+      "@/*": ["./src/*"]
     },
     // set emotion
     "jsxImportSource": "@emotion/react"

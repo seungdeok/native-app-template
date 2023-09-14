@@ -12,21 +12,13 @@
       "warn",
       { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
     ],
-    "import/no-unresolved": "error",
-    "import/extensions": [
-      "error",
-      "ignorePackages",
-      {
-        "js": "never",
-        "jsx": "never",
-        "ts": "never",
-        "tsx": "never"
-      }
-    ],
+    "import/extensions": 0,
+    "import/no-unresolved": 0,
     // add rules
     "import/prefer-default-export": 0, // allow export
     "import/no-extraneous-dependencies": 0, // allow devDependencies
-    "no-param-reassign": ["error", { "props": false }] // allow slice state reassign
+    "no-param-reassign": ["error", { "props": false }], // allow slice state reassign
+    "react/react-in-jsx-scope": 0 // import react
   },
   "settings": {
     "import/parsers": {
