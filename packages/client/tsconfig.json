@@ -20,7 +20,8 @@
       "@/*": ["./src/*"]
     },
     // set emotion
-    "jsxImportSource": "@emotion/react"
+    "jsxImportSource": "@emotion/react",
+    "types": ["@emotion/react/types/css-prop"]
   },
   "include": ["src"]
 }
