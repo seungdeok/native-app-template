@@ -1,5 +1,9 @@
+const prefix = '/react';
+
 export const ROUTE_PATH = {
-  HOME: '/',
+  HOME: `${prefix}/home`,
+  CALENDAR: `${prefix}/calendar`,
+  SETTING: `${prefix}/setting`,
   ERROR_404: '/notfound',
 } as const;
 
