@@ -1,3 +1,9 @@
+import { Layout } from '@/components/Layout/Layout';
+
 export function HomePage() {
-  return <div>HOME PAGE</div>;
+  return (
+    <Layout>
+      <div>HomePage</div>
+    </Layout>
+  );
 }

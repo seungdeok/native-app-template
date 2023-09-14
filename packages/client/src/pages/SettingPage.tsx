@@ -1,3 +1,9 @@
+import { Layout } from '@/components/Layout/Layout';
+
 export function SettingPage() {
-  return <div>SettingPage</div>;
+  return (
+    <Layout>
+      <div>SettingPage</div>
+    </Layout>
+  );
 }

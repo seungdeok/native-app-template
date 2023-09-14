@@ -18,7 +18,8 @@
     "import/prefer-default-export": 0, // allow export
     "import/no-extraneous-dependencies": 0, // allow devDependencies
     "no-param-reassign": ["error", { "props": false }], // allow slice state reassign
-    "react/react-in-jsx-scope": 0 // import react
+    "react/react-in-jsx-scope": 0, // import react
+    "react/no-unknown-property": ["error", { "ignore": ["css"] }]
   },
   "settings": {
     "import/parsers": {

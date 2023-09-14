@@ -1,3 +1,9 @@
+import { Layout } from '@/components/Layout/Layout';
+
 export function Error404Page() {
-  return <div>Error404Page</div>;
+  return (
+    <Layout>
+      <div>Error404Page</div>
+    </Layout>
+  );
 }
