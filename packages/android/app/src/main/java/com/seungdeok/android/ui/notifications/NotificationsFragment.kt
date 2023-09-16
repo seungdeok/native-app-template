@@ -33,7 +33,7 @@ class NotificationsFragment : Fragment() {
 
         val webView: WebView = binding.webView
         notificationsViewModel.text.observe(viewLifecycleOwner) {
-            val url = "https://google.com"
+            val url = "https://native-app-template.vercel.app/react/setting"
             val webSettings = webView.settings
             webSettings.javaScriptEnabled = true
             webSettings.loadWithOverviewMode = true
