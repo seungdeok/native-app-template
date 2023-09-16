@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.seungdeok.android'
+    namespace 'com.seungdeok.app'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.seungdeok.android"
+        applicationId "com.seungdeok.app"
         minSdk 30
         targetSdk 33
         versionCode 1

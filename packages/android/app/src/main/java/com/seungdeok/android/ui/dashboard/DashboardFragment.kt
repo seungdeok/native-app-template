@@ -1,4 +1,4 @@
-package com.seungdeok.android.ui.dashboard
+package com.seungdeok.app.ui.dashboard
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,7 +10,7 @@ import android.webkit.WebViewClient
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.seungdeok.android.databinding.FragmentDashboardBinding
+import com.seungdeok.app.databinding.FragmentDashboardBinding
 
 class DashboardFragment : Fragment() {
 

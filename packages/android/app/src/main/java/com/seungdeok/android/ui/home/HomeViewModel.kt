@@ -1,4 +1,4 @@
-package com.seungdeok.android.ui.home
+package com.seungdeok.app.ui.home
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

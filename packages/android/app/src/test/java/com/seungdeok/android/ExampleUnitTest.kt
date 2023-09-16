@@ -1,4 +1,4 @@
-package com.seungdeok.android
+package com.seungdeok.app
 
 import org.junit.Test
 

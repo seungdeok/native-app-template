@@ -1,4 +1,4 @@
-package com.seungdeok.android.ui.home
+package com.seungdeok.app.ui.home
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,7 +10,7 @@ import android.webkit.WebViewClient
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.seungdeok.android.databinding.FragmentHomeBinding
+import com.seungdeok.app.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
 
