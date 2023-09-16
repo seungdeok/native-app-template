@@ -1,4 +1,4 @@
-package com.seungdeok.android.ui.dashboard
+package com.seungdeok.app.ui.dashboard
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

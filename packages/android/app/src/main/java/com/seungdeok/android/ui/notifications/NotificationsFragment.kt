@@ -1,4 +1,4 @@
-package com.seungdeok.android.ui.notifications
+package com.seungdeok.app.ui.notifications
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,7 +10,7 @@ import android.webkit.WebViewClient
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.seungdeok.android.databinding.FragmentNotificationsBinding
+import com.seungdeok.app.databinding.FragmentNotificationsBinding
 
 class NotificationsFragment : Fragment() {
 
