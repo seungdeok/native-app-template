@@ -33,7 +33,7 @@ class HomeFragment : Fragment() {
 
         val webView: WebView = binding.webView
         homeViewModel.text.observe(viewLifecycleOwner) {
-            val url = "https://google.com"
+            val url = "https://native-app-template.vercel.app/react/home"
             val webSettings = webView.settings
             webSettings.javaScriptEnabled = true
             webSettings.loadWithOverviewMode = true

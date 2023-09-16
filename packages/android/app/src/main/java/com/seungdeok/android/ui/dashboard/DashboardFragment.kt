@@ -33,7 +33,7 @@ class DashboardFragment : Fragment() {
 
         val webView: WebView = binding.webView
         dashboardViewModel.text.observe(viewLifecycleOwner) {
-            val url = "https://google.com"
+            val url = "https://native-app-template.vercel.app/react/calendar"
             val webSettings = webView.settings
             webSettings.javaScriptEnabled = true
             webSettings.loadWithOverviewMode = true
