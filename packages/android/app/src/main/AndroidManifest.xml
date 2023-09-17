@@ -2,9 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+<<<<<<< HEAD
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
 
+=======
+>>>>>>> dc19b2a3a773bbd4d45dfb7b7de25902535f93b8
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -14,6 +17,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Android"
+<<<<<<< HEAD
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <service
@@ -25,6 +29,9 @@
             </intent-filter>
         </service>
 
+=======
+        tools:targetApi="31">
+>>>>>>> dc19b2a3a773bbd4d45dfb7b7de25902535f93b8
         <activity
             android:name=".MainActivity"
             android:exported="true"
