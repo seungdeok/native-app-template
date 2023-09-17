@@ -1,8 +1,15 @@
 package com.seungdeok.app
 
+import android.Manifest
+import android.content.DialogInterface
 import android.content.Intent
+import android.net.Uri
+import android.os.Build
 import android.os.Bundle
+import android.provider.Settings
 import android.util.Log
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AlertDialog
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowCompat
@@ -16,8 +23,45 @@ import com.seungdeok.app.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
     companion object {
         const val TAG = "MainActivity"
+        const val DENIED = "denied"
+        const val EXPLAINED = "explained"
         private lateinit var binding: ActivityMainBinding
     }
+
+    private val registerForActivityResult = registerForActivityResult(ActivityResultContracts.RequestMultiplePermissions()) { permissions ->
+        val deniedPermissionList = permissions.filter { !it.value }.map { it.key }
+        when {
+            deniedPermissionList.isNotEmpty() -> {
+                val map = deniedPermissionList.groupBy { permission ->
+                    if (shouldShowRequestPermissionRationale(permission)) DENIED else EXPLAINED
+                }
+                map[DENIED]?.let {
+                    // 단순 권한 거부
+                }
+                map[EXPLAINED]?.let {
+                    // 권한 요청이 완전히 막혔을 때
+                    val builder = AlertDialog.Builder(this)
+                    builder.setTitle("앱 권한")
+                        .setMessage("해당 앱의 기능을 사용하려면 애플리케이션 정보>권한에서 모든 권한을 허용해 주십시오.")
+                        .setPositiveButton("권한 설정",
+                            DialogInterface.OnClickListener { dialog, id ->
+                                var intent: Intent = Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS).setData(Uri.parse("package:" + applicationContext.packageName))
+                                startActivity(intent)
+                                dialog.cancel()
+                            })
+                        .setNegativeButton("취소",
+                            DialogInterface.OnClickListener { dialog, id ->
+                                dialog.cancel()
+                            })
+                    builder.show()
+                }
+            }
+            else -> {
+                // 모든 권한 허가
+            }
+        }
+    }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,6 +86,12 @@ class MainActivity : AppCompatActivity() {
         navView.setupWithNavController(navController)
 
         initFirebase()
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            registerForActivityResult.launch(
+                arrayOf(Manifest.permission.POST_NOTIFICATIONS)
+            )
+        }
     }
 
     override fun onNewIntent(intent: Intent?) {
