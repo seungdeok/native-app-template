@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CalendarView: View {
     var body: some View {
-        Text("Calendar View")
+        Webview(url: URL(string: "https://native-app-template.vercel.app/react/calendar")!)
     }
 }
 
