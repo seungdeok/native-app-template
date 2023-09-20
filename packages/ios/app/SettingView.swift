@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SettingView: View {
     var body: some View {
-        Text("Setting VIew")
+        Webview(url: URL(string: "https://native-app-template.vercel.app/react/setting")!)
     }
 }
 

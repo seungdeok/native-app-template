@@ -20,6 +20,7 @@
 		FD3D60E62ABB347B008D496E /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = FD3D60E52ABB347B008D496E /* FirebaseAnalytics */; };
 		FD3D60E82ABB347B008D496E /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = FD3D60E72ABB347B008D496E /* FirebaseMessaging */; };
 		FD3D60EA2ABB34B2008D496E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD3D60E92ABB34B2008D496E /* GoogleService-Info.plist */; };
+		FD3D60EE2ABB3AD2008D496E /* Webview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3D60ED2ABB3AD2008D496E /* Webview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		FD3D60DF2AB9DCE5008D496E /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		FD3D60E12ABB2BFD008D496E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		FD3D60E92ABB34B2008D496E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FD3D60ED2ABB3AD2008D496E /* Webview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				FD3D60B52AB9D8AD008D496E /* Preview Content */,
 				FD3D60DD2AB9DCBA008D496E /* SettingView.swift */,
 				FD3D60DF2AB9DCE5008D496E /* CalendarView.swift */,
+				FD3D60ED2ABB3AD2008D496E /* Webview.swift */,
 			);
 			path = app;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				FD3D60E02AB9DCE5008D496E /* CalendarView.swift in Sources */,
 				FD3D60DA2AB9DC8C008D496E /* HomeView.swift in Sources */,
 				FD3D60DE2AB9DCBA008D496E /* SettingView.swift in Sources */,
+				FD3D60EE2ABB3AD2008D496E /* Webview.swift in Sources */,
 				FD3D60B22AB9D8AC008D496E /* ContentView.swift in Sources */,
 				FD3D60B02AB9D8AC008D496E /* appApp.swift in Sources */,
 			);
